@@ -1,4 +1,4 @@
-# TODO Application for interviews in Sentry
+# TODO Application for interviews at Sentry
 
 - clone repo
 - `npm install`
