@@ -30,7 +30,10 @@ export default function TodoList({
   };
 
   const handleDelete = (id) => {
-    throw Error("Not implemented");
+    const updatedArray = allTodos.map((currentTodo) => currentTodo.id !== id);
+
+    setAllTodos(updatedArray);
+    setFilteredTodos(updatedArray);
   };
 
   const handleClick = (id) => {

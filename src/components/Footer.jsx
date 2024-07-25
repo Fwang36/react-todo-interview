@@ -11,7 +11,9 @@ export default function Footer({ allTodos, setAllTodos, setFilteredTodos }) {
   ).length;
 
   const clearCompleted = () => {
-    throw Error("clearCompleted is not defined");
+    const filtered = allTodos.filter((todo) => todo.isCompleted !== false);
+    setAllTodos(filtered);
+    setFilteredTodos(filtered);
   };
 
   const showAll = (e) => {
