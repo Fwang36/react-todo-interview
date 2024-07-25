@@ -14,7 +14,7 @@ export default function DragAndDrop() {
   return (
     <>
       <p className={dadInputStyles}>Drag and drop to reorder list</p>
-      <div class="attribution">
+      <div className="attribution">
         <p>
           Design:{" "}
           <a href="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW">
