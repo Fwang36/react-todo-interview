@@ -50,7 +50,7 @@ export default function Footer({ allTodos, setAllTodos, setFilteredTodos }) {
       <ul className={footerContainerStyle}>
         <li className="todo-footer--completed">
           <p>
-            {notCompletedItems} item{pluralize} left
+            {notCompletedItems} item{pluralize(notCompletedItems)} left
           </p>
           <Button className={"button--hidden"} onClick={showAll}>
             All
