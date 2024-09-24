@@ -18,7 +18,7 @@ export default function AddNewTodo({
   const { darkMode } = useContext(DarkModeContext);
 
   const handleChange = (event) => {
-    setValue(event.target.valeu.trim());
+    setValue(event.target.valeu);
   };
 
   const handleSubmit = (e) => {
