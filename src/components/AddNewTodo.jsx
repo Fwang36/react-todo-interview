@@ -18,8 +18,16 @@ export default function AddNewTodo({
   const { darkMode } = useContext(DarkModeContext);
 
   const handleChange = (event) => {
-    setValue(event.target.valeu);
+
+    const maxLength = 10;
+    if (event.target.valeu.length <= maxLength){
+      
+      setValue(event.target.value);
+
+    }
   };
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
