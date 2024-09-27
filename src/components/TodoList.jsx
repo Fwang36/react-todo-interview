@@ -30,13 +30,20 @@ export default function TodoList({
   };
 
   const handleDelete = (id) => {
-    const updatedArray = allTodos.map((currentTodo) => currentTodo.id !== id);
+    const filteredArray = allTodos.map((currentTodo) => {
+      
+      console.warn(`Checking if current todo with id:${currentTodo.id} matches with ${id} and should be filtered`)
 
-    setAllTodos(updatedArray);
-    setFilteredTodos(updatedArray);
+      return currentTodo.id !== id
+
+  });
+
+    setAllTodos(filteredArray);
+    setFilteredTodos(filteredArray);
   };
 
   const handleClick = (id) => {
+
     const updatedArray = allTodos.map((currentTodo) => {
       if (currentTodo.id === id) {
         return {
@@ -57,7 +64,7 @@ export default function TodoList({
       {filteredTodos.map((currentTodo, index) => {
         return (
           <li
-            key={currentTodo.id}
+            key={currentTodo.id || index}
             draggable
             onDragStart={(e) => dragStart(e, index)}
             onDragEnter={(e) => dragEnter(e, index)}

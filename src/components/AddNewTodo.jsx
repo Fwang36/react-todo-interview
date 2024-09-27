@@ -27,8 +27,6 @@ export default function AddNewTodo({
     }
   };
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
