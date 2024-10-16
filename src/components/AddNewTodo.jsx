@@ -19,7 +19,7 @@ export default function AddNewTodo({
 
   const handleChange = (event) => {
 
-    const maxLength = 10;
+    const maxLength = 30;
     if (event.target.valeu.length <= maxLength){
       
       setValue(event.target.value);
