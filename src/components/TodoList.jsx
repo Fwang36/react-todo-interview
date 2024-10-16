@@ -30,10 +30,9 @@ export default function TodoList({
   };
 
   const handleDelete = (id) => {
+    
     const filteredArray = allTodos.map((currentTodo) => {
       
-      console.warn(`Checking if current todo with id:${currentTodo.id} matches with ${id} and should be filtered`)
-
       return currentTodo.id !== id
 
   });
